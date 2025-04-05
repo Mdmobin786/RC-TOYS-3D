@@ -1,0 +1,482 @@
+/* RC Boats Page Specific Styling - Truck-like Theme */
+
+/* Banner with terrain effect */
+.rc-boats-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1548195667-1a6bd6b7772c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #d4af37; /* Gold border like trucks */
+}
+
+/* Terrain effect instead of water wave */
+.rc-boats-banner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23d4af37" fill-opacity="0.3" d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,229.3C672,245,768,235,864,202.7C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: terrain 10s linear infinite;
+}
+
+@keyframes terrain {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1440px;
+    }
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: #d4af37; /* Gold like trucks */
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Boat card styling - truck-like */
+.boat-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.boat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 3D model container with metallic effect */
+.boat-model-container {
+    background: linear-gradient(to bottom, #666666, #333333);
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Fixed height for model display */
+}
+
+.boat-model-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: rgba(212, 175, 55, 0.2); /* Gold shimmer */
+    filter: blur(3px);
+    animation: metal-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes metal-shimmer {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Specs with truck-like icons */
+.boat-specs {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.spec i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #d4af37; /* Gold like trucks */
+}
+
+/* Type badges with truck-like colors */
+.boat-card[data-type="speed"]::before {
+    content: "Speed";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d4af37; /* Gold */
+    color: black;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.boat-card[data-type="sail"]::before {
+    content: "Sail";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #8B4513; /* Brown */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.boat-card[data-type="submarine"]::before {
+    content: "Submarine";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4a4a4a; /* Dark gray */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.boat-card[data-type="fishing"]::before {
+    content: "Fishing";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #556B2F; /* Dark olive green */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+/* Price styling with truck-like theme */
+.boat-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add to cart button with truck-like styling */
+.add-to-cart {
+    background: linear-gradient(to right, #333333, #666666);
+    color: #d4af37; /* Gold text */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent); /* Gold shimmer */
+    transition: all 0.6s;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(to right, #262626, #4d4d4d);
+    transform: translateY(-2px);
+}
+
+.add-to-cart:hover::before {
+    left: 100%;
+}
+
+/* Boat grid styling */
+.boats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Filter section styling */
+.filters {
+    background: linear-gradient(to right, #e6e6e6, #f0f0f0);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #d4af37; /* Gold accent */
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Boat description styling */
+.boat-description {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.boat-details {
+    padding: 15px;
+}
+
+.boat-details h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .rc-boats-banner {
+        height: 200px;
+    }
+    
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .boat-specs {
+        flex-wrap: wrap;
+    }
+    
+    .spec {
+        margin: 5px 10px;
+    }
+    
+    .boats-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .boat-price {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .add-to-cart {
+        width: 100%;
+    }
+}
+
+/* Notification styling */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #d4af37; /* Gold text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: translateX(0);
+    transition: transform 0.3s, opacity 0.3s;
+    border-left: 3px solid #d4af37;
+}
+
+.notification.hide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Cart modal styling */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cart-modal.show-cart {
+    display: flex;
+    opacity: 1;
+}
+
+.cart-content {
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-top: 5px solid #d4af37; /* Gold border */
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-items {
+    margin: 20px 0;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-details {
+    flex: 2;
+}
+
+.item-details h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.quantity-btn:hover {
+    background-color: #d4af37;
+    color: #000;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff3a3a;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.cart-total {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.cart-total p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #d4af37;
+    color: #000;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 

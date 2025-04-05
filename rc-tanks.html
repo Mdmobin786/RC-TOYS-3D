@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Tanks Collection | RC Toy World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rc-tanks.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>RC Toy World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rc-cars.html">RC Cars</a></li>
+                <li><a href="rc-trucks.html">RC Trucks</a></li>
+                <li><a href="rc-boats.html">RC Boats</a></li>
+                <li><a href="rc-planes.html">RC Planes</a></li>
+                <li><a href="rc-drones.html">RC Drones</a></li>
+                <li><a href="rc-helicopters.html">RC Helicopters</a></li>
+                <li><a href="rc-tanks.html" class="active">RC Tanks</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rc-tanks-banner">
+            <div class="banner-content">
+                <h1>Premium RC Tanks Collection</h1>
+                <p>Explore our battle-ready collection with realistic remote control tanks</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+                
+                <label for="filter-type">Tank Type:</label>
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="battle">Battle Tank</option>
+                    <option value="vintage">Vintage Tank</option>
+                    <option value="modern">Modern MBT</option>
+                    <option value="light">Light Tank</option>
+                    <option value="heavy">Heavy Tank</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="tanks-grid">
+            <!-- Tank 1 -->
+            <div class="tank-card" data-price="8999" data-type="battle">
+                <div class="tank-model-container" id="tank-model-1"></div>
+                <div class="tank-details">
+                    <h3>Tiger Commander</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 12 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Battle-ready RC tank with realistic engine sounds and smoke effects.
+                        Features rotating turret and elevating cannon with firing function.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹8,999</span>
+                        <button class="add-to-cart" data-id="61" data-name="Tiger Commander" data-price="8999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 2 -->
+            <div class="tank-card" data-price="12999" data-type="modern">
+                <div class="tank-model-container" id="tank-model-2"></div>
+                <div class="tank-details">
+                    <h3>Abrams Destroyer</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 15 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 40 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Modern battle tank with metal tracks and detailed exterior.
+                        Features stabilized turret control and realistic suspension system.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹12,999</span>
+                        <button class="add-to-cart" data-id="62" data-name="Abrams Destroyer" data-price="12999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 3 -->
+            <div class="tank-card" data-price="15999" data-type="vintage">
+                <div class="tank-model-container" id="tank-model-3"></div>
+                <div class="tank-details">
+                    <h3>Panther Classic</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 10 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 35 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Historically accurate vintage tank with detailed weathering effects.
+                        Features metal gearbox and authentic camouflage paint scheme.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹15,999</span>
+                        <button class="add-to-cart" data-id="63" data-name="Panther Classic" data-price="15999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 4 -->
+            <div class="tank-card" data-price="6999" data-type="light">
+                <div class="tank-model-container" id="tank-model-4"></div>
+                <div class="tank-details">
+                    <h3>Scout Recon</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 18 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 25 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:18 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Fast and agile light tank with exceptional maneuverability.
+                        Features working headlights and simulated machine gun sounds.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹6,999</span>
+                        <button class="add-to-cart" data-id="64" data-name="Scout Recon" data-price="6999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 5 -->
+            <div class="tank-card" data-price="18999" data-type="heavy">
+                <div class="tank-model-container" id="tank-model-5"></div>
+                <div class="tank-details">
+                    <h3>Fortress KV-2</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 8 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 45 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Heavyweight tank with massive turret and imposing presence.
+                        Features metal chassis and high-torque drive motors for climbing.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹18,999</span>
+                        <button class="add-to-cart" data-id="65" data-name="Fortress KV-2" data-price="18999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 6 -->
+            <div class="tank-card" data-price="13999" data-type="battle">
+                <div class="tank-model-container" id="tank-model-6"></div>
+                <div class="tank-details">
+                    <h3>Desert Scorpion</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 14 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 35 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Modern desert warfare tank with special sand-resistant tracks.
+                        Features infrared battle system for combat with other RC tanks.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹13,999</span>
+                        <button class="add-to-cart" data-id="66" data-name="Desert Scorpion" data-price="13999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 7 -->
+            <div class="tank-card" data-price="10999" data-type="vintage">
+                <div class="tank-model-container" id="tank-model-7"></div>
+                <div class="tank-details">
+                    <h3>Sherman Veteran</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 11 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Classic WWII-era tank with historically accurate details.
+                        Features authentic sound effects and realistic crew figures.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹10,999</span>
+                        <button class="add-to-cart" data-id="67" data-name="Sherman Veteran" data-price="10999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 8 -->
+            <div class="tank-card" data-price="21999" data-type="modern">
+                <div class="tank-model-container" id="tank-model-8"></div>
+                <div class="tank-details">
+                    <h3>Challenger Elite</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 16 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 45 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:14 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Premium modern tank with all-metal construction and functional details.
+                        Features camera system with live feed and programmable movement sequences.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹21,999</span>
+                        <button class="add-to-cart" data-id="68" data-name="Challenger Elite" data-price="21999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 9 -->
+            <div class="tank-card" data-price="7499" data-type="light">
+                <div class="tank-model-container" id="tank-model-9"></div>
+                <div class="tank-details">
+                    <h3>Bulldog Patrol</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 17 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 28 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:18 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Light reconnaissance tank with speed-focused design and low profile.
+                        Features rapid traverse turret and quick-change battery system.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹7,499</span>
+                        <button class="add-to-cart" data-id="69" data-name="Bulldog Patrol" data-price="7499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tank 10 -->
+            <div class="tank-card" data-price="24999" data-type="heavy">
+                <div class="tank-model-container" id="tank-model-10"></div>
+                <div class="tank-details">
+                    <h3>Royal Conqueror</h3>
+                    <div class="tank-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 9 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 50 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:14 Scale</span>
+                    </div>
+                    <p class="tank-description">
+                        Premium heavy tank with gold accents and royal insignias.
+                        Features custom sound system and special smoke generation system.
+                    </p>
+                    <div class="tank-price">
+                        <span class="price">₹24,999</span>
+                        <button class="add-to-cart" data-id="70" data-name="Royal Conqueror" data-price="24999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Cart Modal -->
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-content">
+                <span class="close-cart">&times;</span>
+                <h2>Your Shopping Cart</h2>
+                <div class="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span class="total-amount">₹0</span></p>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 RC Toy World. All rights reserved.</p>
+    </footer>
+
+    <script src="rc-tank-models.js"></script>
+    <script src="rc-tanks.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Helicopters Collection | RC Toy World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rc-helicopters.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>RC Toy World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rc-cars.html">RC Cars</a></li>
+                <li><a href="rc-trucks.html">RC Trucks</a></li>
+                <li><a href="rc-boats.html">RC Boats</a></li>
+                <li><a href="rc-planes.html">RC Planes</a></li>
+                <li><a href="rc-drones.html">RC Drones</a></li>
+                <li><a href="rc-helicopters.html" class="active">RC Helicopters</a></li>
+                <li><a href="rc-tanks.html">RC Tanks</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rc-helicopters-banner">
+            <div class="banner-content">
+                <h1>Premium RC Helicopters Collection</h1>
+                <p>Explore our aerial collection with high-performance remote control helicopters</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+                
+                <label for="filter-type">Helicopter Type:</label>
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="coaxial">Coaxial</option>
+                    <option value="scale">Scale Model</option>
+                    <option value="stunt">Stunt</option>
+                    <option value="micro">Micro</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="helicopters-grid">
+            <!-- Helicopter 1 -->
+            <div class="helicopter-card" data-price="6999" data-type="beginner">
+                <div class="helicopter-model-container" id="helicopter-model-1"></div>
+                <div class="helicopter-details">
+                    <h3>Sky Hawk Trainer</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 15 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 10 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 45 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Beginner-friendly helicopter with self-stabilizing gyro system.
+                        Features crash-resistant frame and simplified flight controls.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹6,999</span>
+                        <button class="add-to-cart" data-id="51" data-name="Sky Hawk Trainer" data-price="6999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 2 -->
+            <div class="helicopter-card" data-price="12999" data-type="scale">
+                <div class="helicopter-model-container" id="helicopter-model-2"></div>
+                <div class="helicopter-details">
+                    <h3>Military Apache</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 20 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 12 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 60 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Scale replica of the Apache military helicopter with authentic details.
+                        Features working LED lights and realistic sound effects.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹12,999</span>
+                        <button class="add-to-cart" data-id="52" data-name="Military Apache" data-price="12999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 3 -->
+            <div class="helicopter-card" data-price="18999" data-type="stunt">
+                <div class="helicopter-model-container" id="helicopter-model-3"></div>
+                <div class="helicopter-details">
+                    <h3>Aerobatic Master 3D</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 35 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 8 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 55 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Professional stunt helicopter with extreme maneuverability.
+                        Features carbon fiber blades and high-torque brushless motors.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹18,999</span>
+                        <button class="add-to-cart" data-id="53" data-name="Aerobatic Master 3D" data-price="18999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 4 -->
+            <div class="helicopter-card" data-price="8999" data-type="coaxial">
+                <div class="helicopter-model-container" id="helicopter-model-4"></div>
+                <div class="helicopter-details">
+                    <h3>Stable Flyer Pro</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 12 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 40 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Coaxial dual-rotor helicopter with exceptional stability.
+                        Perfect for indoor flight with precision hovering capabilities.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹8,999</span>
+                        <button class="add-to-cart" data-id="54" data-name="Stable Flyer Pro" data-price="8999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 5 -->
+            <div class="helicopter-card" data-price="3999" data-type="micro">
+                <div class="helicopter-model-container" id="helicopter-model-5"></div>
+                <div class="helicopter-details">
+                    <h3>Nano Chopper</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 8 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 7 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 15 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Ultra-compact micro helicopter ideal for indoor flying.
+                        Features built-in LED lights and one-button tricks.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹3,999</span>
+                        <button class="add-to-cart" data-id="55" data-name="Nano Chopper" data-price="3999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 6 -->
+            <div class="helicopter-card" data-price="15999" data-type="scale">
+                <div class="helicopter-model-container" id="helicopter-model-6"></div>
+                <div class="helicopter-details">
+                    <h3>Rescue Chopper</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 18 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 12 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 65 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Scale model rescue helicopter with working winch and searchlight.
+                        Features detailed cockpit interior and opening side doors.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹15,999</span>
+                        <button class="add-to-cart" data-id="56" data-name="Rescue Chopper" data-price="15999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 7 -->
+            <div class="helicopter-card" data-price="22999" data-type="stunt">
+                <div class="helicopter-model-container" id="helicopter-model-7"></div>
+                <div class="helicopter-details">
+                    <h3>Competition Fury</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 40 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 10 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 70 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Competition-grade helicopter with programmable flight controller.
+                        Features carbon fiber construction and advanced telemetry system.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹22,999</span>
+                        <button class="add-to-cart" data-id="57" data-name="Competition Fury" data-price="22999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 8 -->
+            <div class="helicopter-card" data-price="5499" data-type="beginner">
+                <div class="helicopter-model-container" id="helicopter-model-8"></div>
+                <div class="helicopter-details">
+                    <h3>Hover Guardian</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 14 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 9 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 35 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Entry-level helicopter with altitude hold and one-key takeoff/landing.
+                        Features durable plastic construction and simplified controls.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹5,499</span>
+                        <button class="add-to-cart" data-id="58" data-name="Hover Guardian" data-price="5499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 9 -->
+            <div class="helicopter-card" data-price="7499" data-type="coaxial">
+                <div class="helicopter-model-container" id="helicopter-model-9"></div>
+                <div class="helicopter-details">
+                    <h3>Sky Commander</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 16 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 14 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 50 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Stable coaxial helicopter with built-in camera for aerial photography.
+                        Features remote-controlled camera angle and real-time video transmission.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹7,499</span>
+                        <button class="add-to-cart" data-id="59" data-name="Sky Commander" data-price="7499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Helicopter 10 -->
+            <div class="helicopter-card" data-price="29999" data-type="scale">
+                <div class="helicopter-model-container" id="helicopter-model-10"></div>
+                <div class="helicopter-details">
+                    <h3>Royal Executive</h3>
+                    <div class="helicopter-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 25 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 75 cm</span>
+                    </div>
+                    <p class="helicopter-description">
+                        Luxury executive helicopter with premium gold accents and LED lighting system.
+                        Features scale interior with leather-look seats and detailed dashboard.
+                    </p>
+                    <div class="helicopter-price">
+                        <span class="price">₹29,999</span>
+                        <button class="add-to-cart" data-id="60" data-name="Royal Executive" data-price="29999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Cart Modal -->
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-content">
+                <span class="close-cart">&times;</span>
+                <h2>Your Shopping Cart</h2>
+                <div class="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span class="total-amount">₹0</span></p>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 RC Toy World. All rights reserved.</p>
+    </footer>
+
+    <script src="rc-helicopter-models.js"></script>
+    <script src="rc-helicopters.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

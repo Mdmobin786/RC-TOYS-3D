@@ -1,0 +1,457 @@
+/* RC Planes Page Specific Styling */
+
+/* Banner with sky effect */
+.rc-planes-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1534481016308-0fca71578ae5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #3a86ff; /* Blue border for sky theme */
+}
+
+/* Cloud effect for banner */
+.rc-planes-banner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.3" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,170.7C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: clouds 20s linear infinite;
+}
+
+@keyframes clouds {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1440px;
+    }
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: #3a86ff; /* Blue for sky theme */
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Plane card styling */
+.plane-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.plane-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 3D model container with sky effect */
+.plane-model-container {
+    background: linear-gradient(to bottom, #87CEEB, #3a86ff);
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Fixed height for model display */
+}
+
+.plane-model-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Cloud shimmer */
+    filter: blur(3px);
+    animation: cloud-shimmer 5s ease-in-out infinite;
+}
+
+@keyframes cloud-shimmer {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Specs with aviation icons */
+.plane-specs {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.spec i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #3a86ff; /* Blue for sky theme */
+}
+
+/* Type badges with aviation colors */
+.plane-card[data-type="trainer"]::before {
+    content: "Trainer";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.plane-card[data-type="sport"]::before {
+    content: "Sport";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF9800; /* Orange */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.plane-card[data-type="warbird"]::before {
+    content: "Warbird";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #F44336; /* Red */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.plane-card[data-type="glider"]::before {
+    content: "Glider";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #00BCD4; /* Cyan */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.plane-card[data-type="stunt"]::before {
+    content: "Stunt";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #9C27B0; /* Purple */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    font-weight: bold;
+}
+
+/* Price styling */
+.plane-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add to cart button with sky theme styling */
+.add-to-cart {
+    background: linear-gradient(to right, #3a86ff, #87CEEB);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(to right, #2e6dd1, #64a5d6);
+    transform: translateY(-2px);
+}
+
+.add-to-cart:hover::before {
+    left: 100%;
+}
+
+/* Planes grid styling */
+.planes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Filter section styling */
+.filters {
+    background: linear-gradient(to right, #e6e6e6, #f0f0f0);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #3a86ff; /* Blue accent */
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.filter-container label {
+    color: #333;
+    font-weight: bold;
+}
+
+.filter-container select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-container select:hover {
+    border-color: #3a86ff;
+}
+
+.filter-container select:focus {
+    outline: none;
+    border-color: #3a86ff;
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2);
+}
+
+/* Plane description styling */
+.plane-description {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.plane-details {
+    padding: 15px;
+}
+
+.plane-details h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .rc-planes-banner {
+        height: 200px;
+    }
+    
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .plane-specs {
+        flex-wrap: wrap;
+    }
+    
+    .spec {
+        margin: 5px 10px;
+    }
+    
+    .planes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .plane-price {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .add-to-cart {
+        width: 100%;
+    }
+}
+
+/* Cart modal styling */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cart-modal.show-cart {
+    display: flex;
+    opacity: 1;
+}
+
+.cart-content {
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-top: 5px solid #3a86ff; /* Blue border */
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-items {
+    margin: 20px 0;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.cart-total {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.cart-total p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.checkout-btn {
+    background: linear-gradient(to right, #3a86ff, #87CEEB);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.checkout-btn:hover {
+    background: linear-gradient(to right, #2e6dd1, #64a5d6);
+    transform: translateY(-2px);
+}
+
+/* Animation for flight */
+@keyframes fly {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(5px) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+} 

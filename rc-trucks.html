@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Trucks Collection | RC Toy World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rc-cars.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>RC Toy World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rc-cars.html">RC Cars</a></li>
+                <li><a href="rc-trucks.html" class="active">RC Trucks</a></li>
+                <li><a href="rc-boats.html">RC Boats</a></li>
+                <li><a href="rc-planes.html">RC Planes</a></li>
+                <li><a href="rc-drones.html">RC Drones</a></li>
+                <li><a href="rc-helicopters.html">RC Helicopters</a></li>
+                <li><a href="rc-tanks.html">RC Tanks</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rc-cars-banner">
+            <div class="banner-content">
+                <h1>Premium RC Trucks Collection</h1>
+                <p>Explore our powerful remote control trucks with advanced off-road capabilities</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+                
+                <label for="filter-type">Truck Type:</label>
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="monster">Monster Truck</option>
+                    <option value="crawler">Rock Crawler</option>
+                    <option value="semi">Semi Truck</option>
+                    <option value="construction">Construction</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="cars-grid">
+            <!-- Truck 1 -->
+            <div class="car-card" data-price="7999" data-type="monster">
+                <div class="car-model-container" id="truck-model-1"></div>
+                <div class="car-details">
+                    <h3>Terrain Crusher 4x4</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 30 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 25 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:12 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Monster truck with oversized wheels for extreme off-road driving.
+                        Features powerful suspension and all-terrain capabilities.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹7,999</span>
+                        <button class="add-to-cart" data-id="11" data-name="Terrain Crusher 4x4" data-price="7999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 2 -->
+            <div class="car-card" data-price="12999" data-type="crawler">
+                <div class="car-model-container" id="truck-model-2"></div>
+                <div class="car-details">
+                    <h3>Mountain Climber Pro</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 15 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 35 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:10 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Professional rock crawler with multi-link suspension and locking differentials.
+                        Designed for climbing the most challenging obstacles.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹12,999</span>
+                        <button class="add-to-cart" data-id="12" data-name="Mountain Climber Pro" data-price="12999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 3 -->
+            <div class="car-card" data-price="9499" data-type="monster">
+                <div class="car-model-container" id="truck-model-3"></div>
+                <div class="car-details">
+                    <h3>Thunder Rumbler</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 35 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:12 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        High-speed monster truck with realistic engine sounds and LED lighting.
+                        Features dual motors for improved torque and climbing ability.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹9,499</span>
+                        <button class="add-to-cart" data-id="13" data-name="Thunder Rumbler" data-price="9499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 4 -->
+            <div class="car-card" data-price="15999" data-type="semi">
+                <div class="car-model-container" id="truck-model-4"></div>
+                <div class="car-details">
+                    <h3>Highway Commander</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 25 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 40 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:14 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Realistic semi truck with detachable trailer and functional lights.
+                        Features precise steering and pneumatic suspension.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹15,999</span>
+                        <button class="add-to-cart" data-id="14" data-name="Highway Commander" data-price="15999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 5 -->
+            <div class="car-card" data-price="5999" data-type="monster">
+                <div class="car-model-container" id="truck-model-5"></div>
+                <div class="car-details">
+                    <h3>Mud Warrior</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 28 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 25 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:16 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        All-weather monster truck with waterproof electronics and mud tires.
+                        Perfect for driving through mud, water, and rough terrain.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹5,999</span>
+                        <button class="add-to-cart" data-id="15" data-name="Mud Warrior" data-price="5999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 6 -->
+            <div class="car-card" data-price="13499" data-type="construction">
+                <div class="car-model-container" id="truck-model-6"></div>
+                <div class="car-details">
+                    <h3>Power Excavator</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 10 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:14 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Fully functional RC excavator with 360° cabin rotation and working arm.
+                        Features metal bucket and hydraulic system for realistic digging.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹13,499</span>
+                        <button class="add-to-cart" data-id="16" data-name="Power Excavator" data-price="13499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 7 -->
+            <div class="car-card" data-price="4999" data-type="monster">
+                <div class="car-model-container" id="truck-model-7"></div>
+                <div class="car-details">
+                    <h3>Junior Monster</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 18 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 20 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:18 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Entry-level monster truck for beginners with simplified controls.
+                        Features sturdy crash-resistant body and soft rubber tires.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹4,999</span>
+                        <button class="add-to-cart" data-id="17" data-name="Junior Monster" data-price="4999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 8 -->
+            <div class="car-card" data-price="18999" data-type="crawler">
+                <div class="car-model-container" id="truck-model-8"></div>
+                <div class="car-details">
+                    <h3>Extreme Crawler 6x6</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 12 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 45 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:10 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Six-wheel drive crawler with unmatched climbing capability.
+                        Features metal chassis, beadlock wheels, and heavy-duty axles.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹18,999</span>
+                        <button class="add-to-cart" data-id="18" data-name="Extreme Crawler 6x6" data-price="18999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 9 -->
+            <div class="car-card" data-price="11499" data-type="construction">
+                <div class="car-model-container" id="truck-model-9"></div>
+                <div class="car-details">
+                    <h3>Dump Titan</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 15 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 35 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:14 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Working dump truck with motorized tilting bed and realistic sounds.
+                        Features large capacity bed and heavy-duty suspension.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹11,499</span>
+                        <button class="add-to-cart" data-id="19" data-name="Dump Titan" data-price="11499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Truck 10 -->
+            <div class="car-card" data-price="14999" data-type="semi">
+                <div class="car-model-container" id="truck-model-10"></div>
+                <div class="car-details">
+                    <h3>Royal Hauler</h3>
+                    <div class="car-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 20 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 1:14 Scale</span>
+                    </div>
+                    <p class="car-description">
+                        Luxury semi truck with gold-plated accents and LED lighting system.
+                        Features chrome wheels, detailed cab interior, and sound module.
+                    </p>
+                    <div class="car-price">
+                        <span class="price">₹14,999</span>
+                        <button class="add-to-cart" data-id="20" data-name="Royal Hauler" data-price="14999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span class="total-amount">₹0</span></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 RC Toy World. All rights reserved.</p>
+    </footer>
+
+    <script src="rc-truck-models.js"></script>
+    <script src="rc-trucks.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

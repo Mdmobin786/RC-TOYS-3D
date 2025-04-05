@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Drones Collection | RC Toy World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rc-drones.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>RC Toy World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rc-cars.html">RC Cars</a></li>
+                <li><a href="rc-trucks.html">RC Trucks</a></li>
+                <li><a href="rc-boats.html">RC Boats</a></li>
+                <li><a href="rc-planes.html">RC Planes</a></li>
+                <li><a href="rc-drones.html" class="active">RC Drones</a></li>
+                <li><a href="rc-helicopters.html">RC Helicopters</a></li>
+                <li><a href="rc-tanks.html">RC Tanks</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rc-drones-banner">
+            <div class="banner-content">
+                <h1>Premium RC Drones Collection</h1>
+                <p>Explore our aerial collection with high-performance remote control quadcopters and drones</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+                
+                <label for="filter-type">Drone Type:</label>
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="camera">Camera Drone</option>
+                    <option value="racing">Racing Drone</option>
+                    <option value="professional">Professional</option>
+                    <option value="mini">Mini Drone</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="drones-grid">
+            <!-- Drone 1 -->
+            <div class="drone-card" data-price="8999" data-type="beginner">
+                <div class="drone-model-container" id="drone-model-1"></div>
+                <div class="drone-details">
+                    <h3>Hover Scout X1</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 40 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 25 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 1080p HD</span>
+                    </div>
+                    <p class="drone-description">
+                        Beginner-friendly drone with altitude hold and one-key return.
+                        Features stable hover capability and crash-resistant design.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹8,999</span>
+                        <button class="add-to-cart" data-id="41" data-name="Hover Scout X1" data-price="8999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 2 -->
+            <div class="drone-card" data-price="14999" data-type="camera">
+                <div class="drone-model-container" id="drone-model-2"></div>
+                <div class="drone-details">
+                    <h3>Sky View Pro</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 55 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 4K Ultra HD</span>
+                    </div>
+                    <p class="drone-description">
+                        Photography drone with 3-axis gimbal and 4K camera.
+                        Features GPS positioning and automatic flight modes for perfect shots.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹14,999</span>
+                        <button class="add-to-cart" data-id="42" data-name="Sky View Pro" data-price="14999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 3 -->
+            <div class="drone-card" data-price="19999" data-type="racing">
+                <div class="drone-model-container" id="drone-model-3"></div>
+                <div class="drone-details">
+                    <h3>Velocity Racer FPV</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 120 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> HD FPV</span>
+                    </div>
+                    <p class="drone-description">
+                        High-speed racing drone with carbon fiber frame and FPV capabilities.
+                        Features powerful brushless motors and low-latency video transmission.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹19,999</span>
+                        <button class="add-to-cart" data-id="43" data-name="Velocity Racer FPV" data-price="19999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 4 -->
+            <div class="drone-card" data-price="29999" data-type="professional">
+                <div class="drone-model-container" id="drone-model-4"></div>
+                <div class="drone-details">
+                    <h3>Aerial Master Pro</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 72 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 35 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 8K Cinema</span>
+                    </div>
+                    <p class="drone-description">
+                        Professional cinematography drone with 8K camera and 360° rotation gimbal.
+                        Features obstacle avoidance and intelligent flight modes for filmmakers.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹29,999</span>
+                        <button class="add-to-cart" data-id="44" data-name="Aerial Master Pro" data-price="29999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 5 -->
+            <div class="drone-card" data-price="4999" data-type="mini">
+                <div class="drone-model-container" id="drone-model-5"></div>
+                <div class="drone-details">
+                    <h3>Nano Explorer</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 20 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 12 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 720p HD</span>
+                    </div>
+                    <p class="drone-description">
+                        Ultra-compact drone perfect for indoor flying and beginners.
+                        Features 360° flips, headless mode, and pocket-sized portability.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹4,999</span>
+                        <button class="add-to-cart" data-id="45" data-name="Nano Explorer" data-price="4999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 6 -->
+            <div class="drone-card" data-price="16999" data-type="camera">
+                <div class="drone-model-container" id="drone-model-6"></div>
+                <div class="drone-details">
+                    <h3>Panorama Voyager</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 60 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 28 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 4K HDR</span>
+                    </div>
+                    <p class="drone-description">
+                        Photography drone specializing in panoramic shots and timelapses.
+                        Features automated flight paths and advanced image stabilization.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹16,999</span>
+                        <button class="add-to-cart" data-id="46" data-name="Panorama Voyager" data-price="16999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 7 -->
+            <div class="drone-card" data-price="24999" data-type="professional">
+                <div class="drone-model-container" id="drone-model-7"></div>
+                <div class="drone-details">
+                    <h3>Enterprise Surveyor</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 65 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 40 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> Thermal + 4K</span>
+                    </div>
+                    <p class="drone-description">
+                        Professional drone with dual thermal and 4K cameras for industrial surveys.
+                        Features RTK positioning and automated mapping capabilities.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹24,999</span>
+                        <button class="add-to-cart" data-id="47" data-name="Enterprise Surveyor" data-price="24999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 8 -->
+            <div class="drone-card" data-price="21999" data-type="racing">
+                <div class="drone-model-container" id="drone-model-8"></div>
+                <div class="drone-details">
+                    <h3>Stealth Racer X</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 140 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 10 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> HD FPV</span>
+                    </div>
+                    <p class="drone-description">
+                        Competition-grade racing drone with custom tuned ESCs and motors.
+                        Features carbon fiber frame and digital HD video transmission.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹21,999</span>
+                        <button class="add-to-cart" data-id="48" data-name="Stealth Racer X" data-price="21999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 9 -->
+            <div class="drone-card" data-price="7499" data-type="beginner">
+                <div class="drone-model-container" id="drone-model-9"></div>
+                <div class="drone-details">
+                    <h3>Hover Guardian</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 35 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 22 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 1080p HD</span>
+                    </div>
+                    <p class="drone-description">
+                        Beginner-friendly drone with propeller guards and stability features.
+                        Features follow-me mode and automatic return-to-home function.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹7,499</span>
+                        <button class="add-to-cart" data-id="49" data-name="Hover Guardian" data-price="7499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone 10 -->
+            <div class="drone-card" data-price="36999" data-type="professional">
+                <div class="drone-model-container" id="drone-model-10"></div>
+                <div class="drone-details">
+                    <h3>Royal Sky Master</h3>
+                    <div class="drone-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 80 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 45 min</span>
+                        <span class="spec"><i class="fas fa-camera"></i> 8K HDR</span>
+                    </div>
+                    <p class="drone-description">
+                        Luxury edition professional drone with gold accents and premium finish.
+                        Features interchangeable camera mounts and extended flight time.
+                    </p>
+                    <div class="drone-price">
+                        <span class="price">₹36,999</span>
+                        <button class="add-to-cart" data-id="50" data-name="Royal Sky Master" data-price="36999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Cart Modal -->
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-content">
+                <span class="close-cart">&times;</span>
+                <h2>Your Shopping Cart</h2>
+                <div class="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span class="total-amount">₹0</span></p>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 RC Toy World. All rights reserved.</p>
+    </footer>
+
+    <script src="rc-drone-models.js"></script>
+    <script src="rc-drones.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

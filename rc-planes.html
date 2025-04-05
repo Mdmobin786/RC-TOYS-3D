@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Planes Collection | RC Toy World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rc-planes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>RC Toy World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rc-cars.html">RC Cars</a></li>
+                <li><a href="rc-trucks.html">RC Trucks</a></li>
+                <li><a href="rc-boats.html">RC Boats</a></li>
+                <li><a href="rc-planes.html" class="active">RC Planes</a></li>
+                <li><a href="rc-drones.html">RC Drones</a></li>
+                <li><a href="rc-helicopters.html">RC Helicopters</a></li>
+                <li><a href="rc-tanks.html">RC Tanks</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rc-planes-banner">
+            <div class="banner-content">
+                <h1>Premium RC Planes Collection</h1>
+                <p>Explore our aerial collection with high-performance remote control planes</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+                
+                <label for="filter-type">Plane Type:</label>
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="trainer">Trainer</option>
+                    <option value="sport">Sport</option>
+                    <option value="warbird">Warbird</option>
+                    <option value="glider">Glider</option>
+                    <option value="stunt">Stunt</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="planes-grid">
+            <!-- Plane 1 -->
+            <div class="plane-card" data-price="7999" data-type="trainer">
+                <div class="plane-model-container" id="plane-model-1"></div>
+                <div class="plane-details">
+                    <h3>Sky Trainer Pro</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 60 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 20 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 120 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Beginner-friendly RC plane with self-stabilizing flight system.
+                        Features crash-resistant foam construction and easy handling.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹7,999</span>
+                        <button class="add-to-cart" data-id="31" data-name="Sky Trainer Pro" data-price="7999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 2 -->
+            <div class="plane-card" data-price="12499" data-type="sport">
+                <div class="plane-model-container" id="plane-model-2"></div>
+                <div class="plane-details">
+                    <h3>Eagle Sport 3D</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 85 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 140 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Dynamic sport plane capable of precise aerobatic maneuvers.
+                        Features brushless motor and digital servo system.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹12,499</span>
+                        <button class="add-to-cart" data-id="32" data-name="Eagle Sport 3D" data-price="12499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 3 -->
+            <div class="plane-card" data-price="15999" data-type="warbird">
+                <div class="plane-model-container" id="plane-model-3"></div>
+                <div class="plane-details">
+                    <h3>Spitfire Mk IX</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 90 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 12 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 150 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Scale replica of the iconic WWII fighter aircraft with authentic details.
+                        Features retractable landing gear and realistic flight characteristics.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹15,999</span>
+                        <button class="add-to-cart" data-id="33" data-name="Spitfire Mk IX" data-price="15999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 4 -->
+            <div class="plane-card" data-price="9999" data-type="glider">
+                <div class="plane-model-container" id="plane-model-4"></div>
+                <div class="plane-details">
+                    <h3>Thermal Soarer XL</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 40 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 45 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 200 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Long-wing glider designed for thermal soaring and extended flight time.
+                        Features detachable motor pod and ultra-lightweight construction.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹9,999</span>
+                        <button class="add-to-cart" data-id="34" data-name="Thermal Soarer XL" data-price="9999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 5 -->
+            <div class="plane-card" data-price="18999" data-type="stunt">
+                <div class="plane-model-container" id="plane-model-5"></div>
+                <div class="plane-details">
+                    <h3>Aerobatic Master</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 100 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 10 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 130 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Professional stunt plane with extreme maneuverability for aerial tricks.
+                        Features carbon fiber reinforcement and high-torque motors.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹18,999</span>
+                        <button class="add-to-cart" data-id="35" data-name="Aerobatic Master" data-price="18999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 6 -->
+            <div class="plane-card" data-price="5999" data-type="trainer">
+                <div class="plane-model-container" id="plane-model-6"></div>
+                <div class="plane-details">
+                    <h3>Mini Cub Trainer</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 45 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 90 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Compact trainer plane perfect for beginners and indoor flying.
+                        Features one-key stabilization and durable EPP foam construction.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹5,999</span>
+                        <button class="add-to-cart" data-id="36" data-name="Mini Cub Trainer" data-price="5999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 7 -->
+            <div class="plane-card" data-price="21999" data-type="warbird">
+                <div class="plane-model-container" id="plane-model-7"></div>
+                <div class="plane-details">
+                    <h3>P-51 Mustang Elite</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 95 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 14 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 165 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Premium scale replica with meticulously detailed paintwork and decals.
+                        Features flaps, retracts, and authentic engine sound system.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹21,999</span>
+                        <button class="add-to-cart" data-id="37" data-name="P-51 Mustang Elite" data-price="21999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 8 -->
+            <div class="plane-card" data-price="14499" data-type="sport">
+                <div class="plane-model-container" id="plane-model-8"></div>
+                <div class="plane-details">
+                    <h3>Delta Racer Pro</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 110 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 12 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 110 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        High-speed delta wing with racing-optimized aerodynamics.
+                        Features LED navigation lights and reinforced wing structure.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹14,499</span>
+                        <button class="add-to-cart" data-id="38" data-name="Delta Racer Pro" data-price="14499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 9 -->
+            <div class="plane-card" data-price="11499" data-type="glider">
+                <div class="plane-model-container" id="plane-model-9"></div>
+                <div class="plane-details">
+                    <h3>Alpine Soarer</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 35 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 60 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 220 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Professional thermal glider with efficient wing design for long flights.
+                        Features telemetry system and adjustable wing configuration.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹11,499</span>
+                        <button class="add-to-cart" data-id="39" data-name="Alpine Soarer" data-price="11499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plane 10 -->
+            <div class="plane-card" data-price="16999" data-type="stunt">
+                <div class="plane-model-container" id="plane-model-10"></div>
+                <div class="plane-details">
+                    <h3>Extreme Acrobat</h3>
+                    <div class="plane-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 105 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 8 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 125 cm</span>
+                    </div>
+                    <p class="plane-description">
+                        Competition-grade aerobatic plane with unlimited flight envelope.
+                        Features 3D thrust vectoring and gyro stabilization system.
+                    </p>
+                    <div class="plane-price">
+                        <span class="price">₹16,999</span>
+                        <button class="add-to-cart" data-id="40" data-name="Extreme Acrobat" data-price="16999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Cart Modal -->
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-content">
+                <span class="close-cart">&times;</span>
+                <h2>Your Shopping Cart</h2>
+                <div class="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span class="total-amount">₹0</span></p>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 RC Toy World. All rights reserved.</p>
+    </footer>
+
+    <script src="rc-plane-models.js"></script>
+    <script src="rc-planes.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

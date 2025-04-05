@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Boats Collection | RC Toy World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rc-boats.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>RC Toy World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rc-cars.html">RC Cars</a></li>
+                <li><a href="rc-trucks.html">RC Trucks</a></li>
+                <li><a href="rc-boats.html" class="active">RC Boats</a></li>
+                <li><a href="rc-planes.html">RC Planes</a></li>
+                <li><a href="rc-drones.html">RC Drones</a></li>
+                <li><a href="rc-helicopters.html">RC Helicopters</a></li>
+                <li><a href="rc-tanks.html">RC Tanks</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rc-boats-banner">
+            <div class="banner-content">
+                <h1>Premium RC Boats Collection</h1>
+                <p>Explore our watercraft collection with high-performance remote control boats</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+                
+                <label for="filter-type">Boat Type:</label>
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="speed">Speed Boat</option>
+                    <option value="sail">Sailboat</option>
+                    <option value="submarine">Submarine</option>
+                    <option value="fishing">Fishing Trawler</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="boats-grid">
+            <!-- Boat 1 -->
+            <div class="boat-card" data-price="6999" data-type="speed">
+                <div class="boat-model-container" id="boat-model-1"></div>
+                <div class="boat-details">
+                    <h3>Hydro Thunder Pro</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 25 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 20 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 45 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        High-speed racing boat with self-righting hull design.
+                        Features water-cooled motor and anti-tilt technology.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹6,999</span>
+                        <button class="add-to-cart" data-id="21" data-name="Hydro Thunder Pro" data-price="6999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 2 -->
+            <div class="boat-card" data-price="9999" data-type="sail">
+                <div class="boat-model-container" id="boat-model-2"></div>
+                <div class="boat-details">
+                    <h3>Royal Clipper Yacht</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 10 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 35 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 60 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Elegant sailboat with realistic rigging and functioning sails.
+                        Includes precision rudder control and wind direction indicator.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹9,999</span>
+                        <button class="add-to-cart" data-id="22" data-name="Royal Clipper Yacht" data-price="9999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 3 -->
+            <div class="boat-card" data-price="12499" data-type="submarine">
+                <div class="boat-model-container" id="boat-model-3"></div>
+                <div class="boat-details">
+                    <h3>Deep Diver Submarine</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 8 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 25 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 35 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Submersible RC boat with depth control and working LED lights.
+                        Can dive up to 1 meter underwater with watertight compartments.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹12,499</span>
+                        <button class="add-to-cart" data-id="23" data-name="Deep Diver Submarine" data-price="12499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 4 -->
+            <div class="boat-card" data-price="14999" data-type="speed">
+                <div class="boat-model-container" id="boat-model-4"></div>
+                <div class="boat-details">
+                    <h3>Wave Ripper Turbo</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 40 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 50 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Competition-grade speed boat with brushless motor system.
+                        Features aerodynamic hull design and adjustable trim tabs.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹14,999</span>
+                        <button class="add-to-cart" data-id="24" data-name="Wave Ripper Turbo" data-price="14999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 5 -->
+            <div class="boat-card" data-price="8499" data-type="fishing">
+                <div class="boat-model-container" id="boat-model-5"></div>
+                <div class="boat-details">
+                    <h3>Harbor Master Trawler</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 12 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 55 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Scale model fishing trawler with working crane and winch system.
+                        Features detailed cabin interior and functioning navigation lights.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹8,499</span>
+                        <button class="add-to-cart" data-id="25" data-name="Harbor Master Trawler" data-price="8499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 6 -->
+            <div class="boat-card" data-price="5999" data-type="speed">
+                <div class="boat-model-container" id="boat-model-6"></div>
+                <div class="boat-details">
+                    <h3>Aqua Dart Mini</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 18 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 20 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 30 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Compact speed boat perfect for pools and small lakes.
+                        Features capsize recovery and easy-to-use controls for beginners.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹5,999</span>
+                        <button class="add-to-cart" data-id="26" data-name="Aqua Dart Mini" data-price="5999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 7 -->
+            <div class="boat-card" data-price="18999" data-type="speed">
+                <div class="boat-model-container" id="boat-model-7"></div>
+                <div class="boat-details">
+                    <h3>Velocity X Hydroplane</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 50 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 15 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 65 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Professional RC hydroplane with water jet propulsion system.
+                        Features carbon fiber hull and programmable speed controls.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹18,999</span>
+                        <button class="add-to-cart" data-id="27" data-name="Velocity X Hydroplane" data-price="18999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 8 -->
+            <div class="boat-card" data-price="16499" data-type="submarine">
+                <div class="boat-model-container" id="boat-model-8"></div>
+                <div class="boat-details">
+                    <h3>Explorer ROV</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 10 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 30 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 40 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Remote operated underwater vehicle with HD camera system.
+                        Features 6-way directional thrusters and live video feed capability.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹16,499</span>
+                        <button class="add-to-cart" data-id="28" data-name="Explorer ROV" data-price="16499">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 9 -->
+            <div class="boat-card" data-price="11999" data-type="sail">
+                <div class="boat-model-container" id="boat-model-9"></div>
+                <div class="boat-details">
+                    <h3>Wind Master Catamaran</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 15 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 40 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 70 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Dual-hull catamaran sailboat with incredible stability.
+                        Features automatic sail control and twin rudder steering system.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹11,999</span>
+                        <button class="add-to-cart" data-id="29" data-name="Wind Master Catamaran" data-price="11999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boat 10 -->
+            <div class="boat-card" data-price="21999" data-type="fishing">
+                <div class="boat-model-container" id="boat-model-10"></div>
+                <div class="boat-details">
+                    <h3>Royal Yacht Cruiser</h3>
+                    <div class="boat-specs">
+                        <span class="spec"><i class="fas fa-tachometer-alt"></i> 20 km/h</span>
+                        <span class="spec"><i class="fas fa-battery-full"></i> 45 min</span>
+                        <span class="spec"><i class="fas fa-ruler-horizontal"></i> 85 cm</span>
+                    </div>
+                    <p class="boat-description">
+                        Luxury yacht with premium gold accents and detailed craftsmanship.
+                        Features LED lighting system and realistic engine sound effects.
+                    </p>
+                    <div class="boat-price">
+                        <span class="price">₹21,999</span>
+                        <button class="add-to-cart" data-id="30" data-name="Royal Yacht Cruiser" data-price="21999">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span class="total-amount">₹0</span></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 RC Toy World. All rights reserved.</p>
+    </footer>
+
+    <script src="rc-boat-models.js"></script>
+    <script src="rc-boats.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 
